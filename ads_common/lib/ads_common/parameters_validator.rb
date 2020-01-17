@@ -305,7 +305,7 @@ module AdsCommon
 
     # Returns copy of object and its sub-objects ("deep" copy).
     def deep_copy(data)
-      return Marshal.load(Marshal.dump(data))
+      return data.deep_dup
     end
 
     # Returns type signature with all inherited fields.
